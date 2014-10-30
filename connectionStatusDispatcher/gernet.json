@@ -1,0 +1,36 @@
+{
+"path":"com.github.airutech.connector.connectionStatusDispatcher",
+"ver":"0.0.0",
+"type":"com.github.airutech.gernet.plugins.kernel",
+"args": [],
+"depends":[{
+  "path":"com.github.airutech.cnets.readerWriter",
+  "ver": "[0.0.0,)"
+},{
+  "path":"com.github.airutech.cnets.runnablesContainer",
+  "ver": "[0.0.0,)"
+},{
+  "path":"com.github.airutech.cnets.selector",
+  "ver": "[0.0.0,)"
+},{
+  "path":"com.github.airutech.cnets.queue",
+  "ver": "[0.0.0,)"
+},{
+  "path":"com.github.airutech.cnets.mapBuffer",
+  "ver": "[0.0.0,)"
+},{
+  "path":"com.github.airutech.cnetsTransports.types",
+  "ver": "[0.0.0,)"
+}],
+"blocks":[],
+"connection":{
+  "writeTo": [{
+    "name":"publishExternally",
+    "type":"com.github.airutech.cnetsTransports.types.connectionStatus"
+  }],
+  "readFrom": [{
+    "name":"inputStatus",
+    "type":"com.github.airutech.cnetsTransports.types.connectionStatus"
+  }]
+}
+}

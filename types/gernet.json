@@ -1,0 +1,17 @@
+{
+"path":"com.github.airutech.connector.types",
+"ver":"0.0.0",
+"type":"com.github.airutech.gernet.plugins.structure",
+"args": [],
+"blocks":[],
+"props":[{
+  "name":"test",
+  "type":"int",
+  "value":10
+}],
+"depends":[],
+"connection":{
+  "writeTo": [],
+  "readFrom": []
+}
+}
