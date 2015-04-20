@@ -1,7 +1,7 @@
 {
-"path":"com.github.airutech.connector.types",
+"path":"com.github.osblinnikov.connector.types",
 "ver":"0.0.0",
-"type":"com.github.airutech.gernet.plugins.structure",
+"type":"com.github.osblinnikov.gernet.plugins.structure",
 "args": [],
 "blocks":[],
 "props":[{

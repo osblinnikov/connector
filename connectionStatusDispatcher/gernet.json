@@ -1,36 +1,36 @@
 {
-"path":"com.github.airutech.connector.connectionStatusDispatcher",
+"path":"com.github.osblinnikov.connector.connectionStatusDispatcher",
 "ver":"0.0.0",
-"type":"com.github.airutech.gernet.plugins.kernel",
+"type":"com.github.osblinnikov.gernet.plugins.kernel",
 "args": [],
 "depends":[{
-  "path":"com.github.airutech.cnets.readerWriter",
+  "path":"com.github.osblinnikov.cnets.readerWriter",
   "ver": "[0.0.0,)"
 },{
-  "path":"com.github.airutech.cnets.runnablesContainer",
+  "path":"com.github.osblinnikov.cnets.runnablesContainer",
   "ver": "[0.0.0,)"
 },{
-  "path":"com.github.airutech.cnets.selector",
+  "path":"com.github.osblinnikov.cnets.selector",
   "ver": "[0.0.0,)"
 },{
-  "path":"com.github.airutech.cnets.queue",
+  "path":"com.github.osblinnikov.cnets.queue",
   "ver": "[0.0.0,)"
 },{
-  "path":"com.github.airutech.cnets.mapBuffer",
+  "path":"com.github.osblinnikov.cnets.mapBuffer",
   "ver": "[0.0.0,)"
 },{
-  "path":"com.github.airutech.cnetsTransports.types",
+  "path":"com.github.osblinnikov.cnetsTransports.types",
   "ver": "[0.0.0,)"
 }],
 "blocks":[],
 "connection":{
   "writeTo": [{
     "name":"publishExternally",
-    "type":"com.github.airutech.cnetsTransports.types.connectionStatus"
+    "type":"com.github.osblinnikov.cnetsTransports.types.connectionStatus"
   }],
   "readFrom": [{
     "name":"inputStatus",
-    "type":"com.github.airutech.cnetsTransports.types.connectionStatus"
+    "type":"com.github.osblinnikov.cnetsTransports.types.connectionStatus"
   }]
 }
 }

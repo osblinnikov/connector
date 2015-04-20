@@ -1,7 +1,7 @@
 {
-"path":"com.github.airutech.connector.adapter",
+"path":"com.github.osblinnikov.connector.adapter",
 "ver":"0.0.0",
-"type":"com.github.airutech.gernet.plugins.library",
+"type":"com.github.osblinnikov.gernet.plugins.library",
 "args": [],
 "blocks":[],
 "depends":[],
