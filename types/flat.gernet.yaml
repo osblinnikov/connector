@@ -1,0 +1,21 @@
+args: []
+blocks: []
+channels: []
+connection:
+    readFrom: []
+    writeTo: []
+depends: []
+emit: []
+hide: false
+name: ''
+path: com.github.osblinnikov.connector.types
+props:
+-   name: test
+    size: null
+    type: int
+    value: 10
+receive: []
+spawnMode: '0'
+topology: []
+type: com.github.osblinnikov.gernet.plugins.structure
+ver: 0.0.0
