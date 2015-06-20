@@ -1,14 +1,11 @@
 args: []
-blocks: []
 channels: []
-connection:
-    readFrom: []
-    writeTo: []
 depends: []
 emit: []
+gen:
+- github.com/osblinnikov/gernet/plugins/library
 hide: false
-name: ''
-path: com.github.osblinnikov.connector.types
+name: github.com/osblinnikov/connector/types
 props:
 -   name: test
     size: null
@@ -17,5 +14,3 @@ props:
 receive: []
 spawnMode: '0'
 topology: []
-type: com.github.osblinnikov.gernet.plugins.structure
-ver: 0.0.0

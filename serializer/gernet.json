@@ -1,7 +1,6 @@
 {
-"path":"com.github.osblinnikov.connector.serializer",
-"ver":"0.0.0",
-"type":"com.github.osblinnikov.gernet.plugins.kernel",
+"name":"github.com/osblinnikov/connector/serializer",
+"gen":["github.com/osblinnikov/gernet/plugins/kernel"],
 "args": [{
   "name": "publishedBuffersNames",
   "type": "string[]"
@@ -9,46 +8,22 @@
   "name": "maxNodesCount",
   "type": "int"
 }],
-"depends":[{
-  "path":"com.github.osblinnikov.cnets.types",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnetsTransports.nodeRepositoryProtocol",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnetsTransports.types",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.readerWriter",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.queue",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.runnablesContainer",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.selector",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.mapBuffer",
-  "ver": "[0.0.0,)"
-}],
-"blocks":[],
-"connection":{
-  "writeTo": [{
-    "name":"output",
-    "type":"com.github.osblinnikov.cnetsTransports.types.cnetsProtocol"
-  }],
-  "readFrom": [{
-    "name":"connectionStatus",
-    "type":"com.github.osblinnikov.cnetsTransports.types.connectionStatus"
-  },{
-    "name":"receiveRemoteRepository",
-    "type":"com.github.osblinnikov.cnetsTransports.nodeRepositoryProtocol.nodeRepositoryProtocol"
-  },{
-    "name":"localBuffers",
-    "type":"com.github.osblinnikov.connector.types.localBuffers"
-  }]
-}
+"depends":[
+  "github.com/osblinnikov/cnets/types"
+  ,"github.com/osblinnikov/connector/nodeRepositoryProtocol"
+  ,"github.com/osblinnikov/connector/types"
+  ,"github.com/osblinnikov/cnets/readerWriter"
+  ,"github.com/osblinnikov/cnets/queue"
+  ,"github.com/osblinnikov/cnets/runnablesContainer"
+  ,"github.com/osblinnikov/cnets/selector"
+  ,"github.com/osblinnikov/cnets/mapBuffer"
+],
+"emit":[
+ "output github.com/osblinnikov/connector/types/cnetsProtocol"
+],
+  "receive": [
+    "connectionStatus github.com/osblinnikov/connector/types/connectionStatus"
+  , "receiveRemoteRepository github.com/osblinnikov/connector/types/nodeRepositoryProtocol"
+  ,"localBuffers github.com/osblinnikov/connector/types/localBuffers"
+]
 }

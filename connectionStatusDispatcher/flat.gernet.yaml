@@ -1,0 +1,27 @@
+args: []
+channels: []
+depends:
+-   name: github.com/osblinnikov/cnets/types
+-   name: github.com/osblinnikov/connector/types
+-   name: github.com/osblinnikov/cnets/readerWriter
+-   name: github.com/osblinnikov/cnets/queue
+-   name: github.com/osblinnikov/cnets/runnablesContainer
+-   name: github.com/osblinnikov/cnets/selector
+-   name: github.com/osblinnikov/cnets/mapBuffer
+emit:
+-   channel: publishExternally
+    size: null
+    timeout: null
+    type: github.com/osblinnikov/connector/types/connectionStatus
+gen:
+- github.com/osblinnikov/gernet/plugins/kernel
+hide: false
+name: github.com/osblinnikov/connector/connectionStatusDispatcher
+props: []
+receive:
+-   channel: inputStatus
+    size: null
+    timeout: null
+    type: github.com/osblinnikov/connector/types/connectionStatus
+spawnMode: '0'
+topology: []

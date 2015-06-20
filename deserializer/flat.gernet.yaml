@@ -1,0 +1,40 @@
+args:
+-   name: subscribedBuffersNames
+    type: string[]
+-   name: maxNodesCount
+    type: int
+channels: []
+depends:
+-   name: github.com/osblinnikov/cnets/types
+-   name: github.com/osblinnikov/connector/types
+-   name: github.com/osblinnikov/cnets/readerWriter
+-   name: github.com/osblinnikov/cnets/queue
+-   name: github.com/osblinnikov/cnets/runnablesContainer
+-   name: github.com/osblinnikov/cnets/selector
+-   name: github.com/osblinnikov/cnets/mapBuffer
+emit:
+-   channel: localBuffers
+    size: null
+    timeout: null
+    type: github.com/osblinnikov/connector/types/localBuffers
+gen:
+- github.com/osblinnikov/gernet/plugins/kernel
+hide: false
+name: ''
+path: github.com/osblinnikov/connector/deserializer
+props: []
+receive:
+-   channel: connectionStatus
+    size: null
+    timeout: null
+    type: github.com/osblinnikov/connector/types/connectionStatus
+-   channel: receiveRemoteRepository
+    size: null
+    timeout: null
+    type: github.com/osblinnikov/connector/types/nodeRepositoryProtocol
+-   channel: input
+    size: null
+    timeout: null
+    type: github.com/osblinnikov/connector/types/cnetsProtocol
+spawnMode: '0'
+topology: []

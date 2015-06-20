@@ -1,36 +1,15 @@
 {
-"path":"com.github.osblinnikov.connector.connectionStatusDispatcher",
-"ver":"0.0.0",
-"type":"com.github.osblinnikov.gernet.plugins.kernel",
-"args": [],
-"depends":[{
-  "path":"com.github.osblinnikov.cnets.readerWriter",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.runnablesContainer",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.selector",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.queue",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnets.mapBuffer",
-  "ver": "[0.0.0,)"
-},{
-  "path":"com.github.osblinnikov.cnetsTransports.types",
-  "ver": "[0.0.0,)"
-}],
-"blocks":[],
-"connection":{
-  "writeTo": [{
-    "name":"publishExternally",
-    "type":"com.github.osblinnikov.cnetsTransports.types.connectionStatus"
-  }],
-  "readFrom": [{
-    "name":"inputStatus",
-    "type":"com.github.osblinnikov.cnetsTransports.types.connectionStatus"
-  }]
-}
+"name":"github.com/osblinnikov/connector/connectionStatusDispatcher",
+"gen":["github.com/osblinnikov/gernet/plugins/kernel"],
+"depends":[
+  "github.com/osblinnikov/cnets/types"
+  ,"github.com/osblinnikov/connector/types"
+  ,"github.com/osblinnikov/cnets/readerWriter"
+  ,"github.com/osblinnikov/cnets/queue"
+  ,"github.com/osblinnikov/cnets/runnablesContainer"
+  ,"github.com/osblinnikov/cnets/selector"
+  ,"github.com/osblinnikov/cnets/mapBuffer"
+],
+"emit":["publishExternally github.com/osblinnikov/connector/types/connectionStatus"],
+"receive":["inputStatus github.com/osblinnikov/connector/types/connectionStatus"]
 }

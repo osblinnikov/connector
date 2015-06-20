@@ -1,17 +1,10 @@
 {
-"path":"com.github.osblinnikov.connector.types",
-"ver":"0.0.0",
-"type":"com.github.osblinnikov.gernet.plugins.structure",
+"name":"github.com/osblinnikov/connector/types",
+"gen":["github.com/osblinnikov/gernet/plugins/library"],
 "args": [],
-"blocks":[],
 "props":[{
   "name":"test",
   "type":"int",
   "value":10
-}],
-"depends":[],
-"connection":{
-  "writeTo": [],
-  "readFrom": []
-}
+}]
 }
