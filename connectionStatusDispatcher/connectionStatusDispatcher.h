@@ -37,14 +37,16 @@ connectionStatusDispatcher_connector_osblinnikov_github_com_EXPORT_API
 void connectionStatusDispatcher_connector_osblinnikov_github_com_deinit(struct connectionStatusDispatcher_connector_osblinnikov_github_com *that);
 
 typedef struct connectionStatusDispatcher_connector_osblinnikov_github_com{
-  bufferReadData *_readData;
   writer wpublishExternally0;
   reader rinputStatus0;
+  arrayObject _arrReaders_;
+  reader rSelect;
+  selector_cnets_osblinnikov_github_com readersSelector;
 
   
   struct runnablesContainer_cnets_osblinnikov_github_com (*getRunnables)(struct connectionStatusDispatcher_connector_osblinnikov_github_com *that);
   struct runnablesContainer_cnets_osblinnikov_github_com _runnables;
-/*[[[end]]] (checksum: 284fe5f3cae494a4c834a09cccf95f8f)*/
+/*[[[end]]] (checksum: ebb671c2683fd5485b3c567c73e68be1)*/
 
 }connectionStatusDispatcher_connector_osblinnikov_github_com;
 

@@ -29,10 +29,10 @@ types_connector_osblinnikov_github_com_EXPORT_API
 void types_connector_osblinnikov_github_com_deinit(struct types_connector_osblinnikov_github_com *that);
 
 typedef struct types_connector_osblinnikov_github_com{
-    _int32_t test;
+    int32_t test;
 
   
-/*[[[end]]] (checksum: 17ab31e9e39a2a69daa98466c1800b4a)*/
+/*[[[end]]] (checksum: 7fce33c9ff0630827b502e378d04b33d)*/
 
 }types_connector_osblinnikov_github_com;
 

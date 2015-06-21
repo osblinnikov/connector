@@ -26,19 +26,20 @@ struct arrayObject serializer_connector_osblinnikov_github_com_getReaders(void *
 
 
 void serializer_connector_osblinnikov_github_com_setReadData(void *t, bufferReadData *readData){
+  if(t == NULL || readData == NULL){return;}
   struct serializer_connector_osblinnikov_github_com *that = (struct serializer_connector_osblinnikov_github_com*)t;
-  that->_readData = readData;
+  
+  that->rSelect.setReadData(&that->rSelect,readData);
 }
 
 
 void serializer_connector_osblinnikov_github_com_init(struct serializer_connector_osblinnikov_github_com *that,
-    _arrayObject _publishedBuffersNames,
-    _int32_t _maxNodesCount,
+    arrayObject _publishedBuffersNames,
+    int32_t _maxNodesCount,
     writer _woutput0,
     reader _rconnectionStatus0,
     reader _rreceiveRemoteRepository1,
     reader _rlocalBuffers2){
-  that->_readData = NULL;
   
   that->publishedBuffersNames = _publishedBuffersNames;
   that->maxNodesCount = _maxNodesCount;
@@ -70,7 +71,7 @@ void serializer_connector_osblinnikov_github_com_deinit(struct serializer_connec
   selector_cnets_osblinnikov_github_com_deinit(&that->readersSelector);
 }
 
-/*[[[end]]] (checksum: 7aa4396ef26101816e2e730ab93bacee)*/
+/*[[[end]]] (checksum: 3b046e120584719e8d72d576bbdb21cc)*/
 
 void serializer_connector_osblinnikov_github_com_run(void *t){
   /*struct serializer_connector_osblinnikov_github_com *that = (struct serializer_connector_osblinnikov_github_com*)t;*/
