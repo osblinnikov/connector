@@ -13,7 +13,6 @@ void connectionStatusDispatcher_connector_osblinnikov_github_com_onCreate(struct
 void connectionStatusDispatcher_connector_osblinnikov_github_com_onDestroy(struct connectionStatusDispatcher_connector_osblinnikov_github_com *that);
 void connectionStatusDispatcher_connector_osblinnikov_github_com_onKernels(struct connectionStatusDispatcher_connector_osblinnikov_github_com *that);
 struct arrayObject connectionStatusDispatcher_connector_osblinnikov_github_com_getReaders(void *t);
-void connectionStatusDispatcher_connector_osblinnikov_github_com_setReadData(void *t, bufferReadData *readData);
 
 struct runnablesContainer_cnets_osblinnikov_github_com connectionStatusDispatcher_connector_osblinnikov_github_com_getRunnables(struct connectionStatusDispatcher_connector_osblinnikov_github_com *that){
   return that->_runnables;
@@ -21,15 +20,11 @@ struct runnablesContainer_cnets_osblinnikov_github_com connectionStatusDispatche
 
 struct arrayObject connectionStatusDispatcher_connector_osblinnikov_github_com_getReaders(void *t){
   struct connectionStatusDispatcher_connector_osblinnikov_github_com *that = (struct connectionStatusDispatcher_connector_osblinnikov_github_com*)t;
-  return that->_arrReaders_;
-}
-
-
-void connectionStatusDispatcher_connector_osblinnikov_github_com_setReadData(void *t, bufferReadData *readData){
-  if(t == NULL || readData == NULL){return;}
-  struct connectionStatusDispatcher_connector_osblinnikov_github_com *that = (struct connectionStatusDispatcher_connector_osblinnikov_github_com*)t;
-  
-  that->rSelect.setReadData(&that->rSelect,readData);
+  arrayObject arr;
+  arr.length = 1;
+  arr.itemSize = sizeof(reader);
+  arr.array = (void*)&that->rSelect;
+  return arr;
 }
 
 
@@ -61,7 +56,7 @@ void connectionStatusDispatcher_connector_osblinnikov_github_com_deinit(struct c
   selector_cnets_osblinnikov_github_com_deinit(&that->readersSelector);
 }
 
-/*[[[end]]] (checksum: c48451a873f27db1d2cdfd0809a2ab01)*/
+/*[[[end]]] (checksum: c18b07b57b5251bd3c123b664f8de501)*/
 
 void connectionStatusDispatcher_connector_osblinnikov_github_com_run(void *t){
   /*struct connectionStatusDispatcher_connector_osblinnikov_github_com *that = (struct connectionStatusDispatcher_connector_osblinnikov_github_com*)t;*/

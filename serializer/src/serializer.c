@@ -13,7 +13,6 @@ void serializer_connector_osblinnikov_github_com_onCreate(struct serializer_conn
 void serializer_connector_osblinnikov_github_com_onDestroy(struct serializer_connector_osblinnikov_github_com *that);
 void serializer_connector_osblinnikov_github_com_onKernels(struct serializer_connector_osblinnikov_github_com *that);
 struct arrayObject serializer_connector_osblinnikov_github_com_getReaders(void *t);
-void serializer_connector_osblinnikov_github_com_setReadData(void *t, bufferReadData *readData);
 
 struct runnablesContainer_cnets_osblinnikov_github_com serializer_connector_osblinnikov_github_com_getRunnables(struct serializer_connector_osblinnikov_github_com *that){
   return that->_runnables;
@@ -21,15 +20,11 @@ struct runnablesContainer_cnets_osblinnikov_github_com serializer_connector_osbl
 
 struct arrayObject serializer_connector_osblinnikov_github_com_getReaders(void *t){
   struct serializer_connector_osblinnikov_github_com *that = (struct serializer_connector_osblinnikov_github_com*)t;
-  return that->_arrReaders_;
-}
-
-
-void serializer_connector_osblinnikov_github_com_setReadData(void *t, bufferReadData *readData){
-  if(t == NULL || readData == NULL){return;}
-  struct serializer_connector_osblinnikov_github_com *that = (struct serializer_connector_osblinnikov_github_com*)t;
-  
-  that->rSelect.setReadData(&that->rSelect,readData);
+  arrayObject arr;
+  arr.length = 1;
+  arr.itemSize = sizeof(reader);
+  arr.array = (void*)&that->rSelect;
+  return arr;
 }
 
 
@@ -71,7 +66,7 @@ void serializer_connector_osblinnikov_github_com_deinit(struct serializer_connec
   selector_cnets_osblinnikov_github_com_deinit(&that->readersSelector);
 }
 
-/*[[[end]]] (checksum: 3b046e120584719e8d72d576bbdb21cc)*/
+/*[[[end]]] (checksum: c0c6319acbcb57a6e5532a32a6838fd7)*/
 
 void serializer_connector_osblinnikov_github_com_run(void *t){
   /*struct serializer_connector_osblinnikov_github_com *that = (struct serializer_connector_osblinnikov_github_com*)t;*/
